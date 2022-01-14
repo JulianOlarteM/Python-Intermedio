@@ -1,0 +1,165 @@
+El Zen de Python:
+Se compone por los principios para escribir tu código de manera clara, sencilla y precisa. Estos son:
+
+    * Bello es mejor que feo:
+        Pyhton es estéticamente superior a cualquier otro lenguaje de programación. 
+        Al momento de escribir código, es mejor que sea de manera limpia y estética.
+   
+    * Explícito es mejor que implícito:
+        Hacer más fácil que las otras personas entiendan el código.
+   
+    * Simple es mejor que complejo:
+        Es mejor tener una implementación simple, que ocupe pocas lineas de código y 
+        sea entendible, a que sea una larga y complicada.
+   
+    * Complejo es mejor que complicado:
+        Si tenemos que extendernos en la implementación y hacerla más compleja para que
+         el código si se entienda, esto es mejor que hacerlo simple y mal.
+   
+    * Plano es mejor que anidado:
+        El anidamiento es cuando tenemos un bloque de código dentro de otro bloque de código (dependiendo de este). Esto se nota en Python por la identación, nos quedarían estos bloques muy corridos a la derecha.
+        Es mejor evitar el anidamiento, y hacer las cosas de manera plana.
+   
+    * Espaciado es mejor que denso:
+        Por la identación de Python (sus sangrías), este principio se nos hace imposible de esquivar. El código inevitablemente es espaciado.
+   
+   * La legibilidad es importante:
+        Es importante que otros programadores puedan entender lo que estamos escribiendo. 
+        Esto hace más fáciles las cosas cuando trabajemos con otros en los proyectos.
+   
+   * Los casos especiales no son lo suficientemente especiales cpmo para romper las reglas (sin embargo, la practicidad le gana a la pureza):
+        Siempre que podamos respetar estas reglas que nos plantea Python, es mejor así. Sin embargo, si por el hecho de hacer un código
+         muy puro o muy ‘Pythonista’, este pierde legibilidad, es mejor ser más prácticos y romper o saltearnos algunas de estas reglas para que el código sea más eficiente. Por lo tanto, llegado el momento debermos decidir si es mejor hacer las cosas de manera pura o práctica.
+   
+   * Los errores nunca deberían pasar silenciosamente (a menos que se silencien explícitamente):
+        Manejar los erroes es fundamental. Cada error nos dice algo y hay que prestarle atención.
+         A menos que seas capaz de silenciar un error explícitamente, aunque para esto hay que tener criterio.
+    
+    * Frente a la ambiguedad, evitar la tentación de adivinar:
+        Nuestro código debería solamente tener una interpretación. Si en un contexto significa algo,
+         y en otro otra cosa, es mejor que lo revisemos y busquemos una solución.
+    
+    * Debería haber una, y preferiblemente sola, una manera obvia de hacerlo. (A pesar de que esa manera no sea obvia a menos que seas holandés):
+        Esto hace referencia al creador de Python ''Guido van Rossum", que de manera muy inteligente 
+        encontrar las soluciones precisas a los problemas, y deberíamos imitarlo.
+    
+    * Ahora es mejor que nunca:
+        Es mejor desarrollar nuestra solución cuánto antes, no dejarlo para mañana o para mas adelante.
+    
+    * A pesar de que nunca es muchas veces mejor que ahora mismo:
+        Si por hacer las cosas ya y tenemos poco tiempo, si es mejor dejarlo para después y
+         no hacerlo apurado y mal.
+    
+    * Si la implementación es díficil de explicar, es una mala idea, y si es fácil de explicar, es una buena idea:
+        Si somos capaces de explicar nuestra implementación a otros desarrolladores paso a paso,
+        es una buena idea. En cambio si no podemos hacerlo, significa que ni nosotros entendemos
+        la implementación y deberíamos repensar nuestra forma de encarar la solución.
+    
+    **Los espacios de nombres son una gran idea, ¡Tengamos más de esos! (namespaces):
+        Es el nombre que se ha indicado luego de la palabra import, es decir la ruta (namespace) del
+        módulo. (Lo veremos a profundidad más adelante).
+
+PEPS : documentacion de diferentes cosas para el manejo de pyrhon
+
+Entorno Virtual
+
+    Nos permite controlar los modulos que necesitemos para desarrollar , pero ¿que es un modulo? nos sirve para 
+    desarrollar tareas de manera facil,con los modulos no es necesario reinventar la rueda, sino trabajar con lo que ya esta echo. 
+    Ejemplo: modulo random, modulo plot,etc. 
+
+    cuando los modulos se actualizan en el mi repositorio local, es posible que proyectos fallen ya que en una version nueva de algun modulo 
+    pudo cambiar algo especifico, para eso funciona mi entorno virtual, nos permite controlar proyectos de manera individual, no manjeamos un python 
+    para todos los proyectos, sino tenemos a un python diferente por cada proyecto, podemos elegir los modulos en las versiones que nosotros
+    queramos, excetera. 
+
+    Creación de ambiente Virtual:
+
+        python3 -m venv venv
+
+        Windows:
+        .\venv\Scripts\activate
+
+        Unix o MacOS:
+        source venv/bin/activate
+
+        Desactivar el ambiente virtual:
+        deactivate
+
+        Crear un alias en linux/mac:
+        alias nombre-alias="comando"
+
+        Windows:
+        alias avenv=.\venv\Scripts\activate
+
+Intalacion de dependencias de Pip 
+
+    Recordando que python tiene gran variedad de modulos, ahi unos que estan por defecto instalados, peor ahi unos que 
+    debemos instalar de manera externa, por eso debemos tener un instalador. Pip es el mayor instalador de python. 
+    Algunos de estos modulos son: 
+        * Requests
+        * BautifulSup4
+        * Pandas
+        * Numpy
+        * Pytest
+        * etc
+
+    Como utilzar pip para intealar esto en nuestros proyectos:
+
+    pip freeze : nos permite determinar que modulos ya estan instalados en nuestro entorno virtual
+    pip install _modulo: isntala el modulo especifico en nustra entorno virutal
+
+    Que pasa si otro desarrolLador quiere trabajar en tu proyecto? va necesitar los mimsmos modulos, en las mismas versiones, con todos
+    exactamente igual. Como compartir estas dependencias de manera facil?
+
+        pip freeze > requirements.txt ; nos genrea un archivo txt con todos las dependencias del proyecto.
+        pip install -r requirements.txt : esto lo ejecuta quien no tiene estas dependenias, lo istala el desarrolador que tiene estas dependencias. 
+        
+Alternativa Anaconda
+    nos permite crear entornos virtuales de manera grafica, pero es lo mismo echo en la consola .
+
+
+Listas y diccionarios anidados: 
+
+    Como trabajaro con listas que contienen diccionarios, y con diccionarios que contienen listas. 
+    lits_and_dicts.py
+
+List y dict Comprehensions:
+    Crea listas y diccionarios  con condiciones establecidas
+        revisar list_comperhensions.py y dict_comperhension.py
+
+Funciones anonimas (lambda funcionts)
+    Funciones que no tienen un identificador, no tienen un nombre 
+        
+        lambda argumentos: expresion
+
+Funciones de orden superior:
+    funciones que reciben como parametro a otra funcion 
+    Existen tres tipos de funciones de orden superiro basicas:
+        *Filter
+        *Map
+        *Reduce
+
+Los errores en el codigo:
+
+    Existen dos tipos de errore:
+        * Cuando python nos avisa (el lenguaje nos devulve un treisag):
+            Exiten dos tipos de errores en esta categoria:
+            
+                * SyntaxError:  Cuando escribimos mal codigo. python detiene el programa cuando ve un error de sintaxis
+
+                * Exception : La diferencia con los errores de sintaxis radica en que aca python no detiene el programa, 
+                  las excepciones suceden en algun lugar de nuestro codigo, las lineas ue estaban antes del error si se 
+                  van a ejecutar. Algunas de las excepciones son:
+
+                    KeyboardInterrupt   : Exception cuando nosotros cortamos el proceso de python. Cuando ejecutamos "control + c"
+                    KeyError            : Intenamos acceder a una llave en un diccioanrio que no existe. 
+                    IndexError          : Cuando intentamos acceder a un index de una lista que no existe.
+                    FileNoFoundError    : Cuando intenamos abrir un archivo desde python que no existe. 
+                    ZeroDivisionError   : Cuando intamos dividir un numero entre 0
+                    ImportError         : Cuando nos genera un error alguna importacion de un modulo.
+
+
+
+            
+        * Cuando python no nos avisa (debugging o depuracion):
+             
